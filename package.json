@@ -1,0 +1,19 @@
+{
+  "name": "reddit-wierd-bro-bot",
+  "version": "1.0.0",
+  "description": "To comb reddit posts for misspellings of Weird and replace them with the Weird Bro Copy pasta.",
+  "main": "index.js",
+  "dependencies": {
+    "snoowrap": "^1.21.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
