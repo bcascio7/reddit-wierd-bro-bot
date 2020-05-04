@@ -4,6 +4,9 @@
   "description": "To comb reddit posts for misspellings of Weird and replace them with the Weird Bro Copy pasta.",
   "main": "index.js",
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-cron": "^2.0.3",
+    "node-schedule": "^1.3.2",
     "snoowrap": "^1.21.0"
   },
   "devDependencies": {

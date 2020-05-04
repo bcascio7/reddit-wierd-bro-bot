@@ -18,3 +18,11 @@ To comb reddit posts for misspellings of Weird and replace them with the Weird B
 ## Contact Details
 
 Email: redditwierdbrobot@gmail.com
+
+## Enhancement
+
+- Look into Snoostream for comment stream usability instead of attempting to query comments
+  - 2 functions, 1 does the title checker, one does the comments
+    - title checker runs every minute
+    - comment stream constantly runs till turned off
+- Look into running this on a raspberry pie server running in the house
