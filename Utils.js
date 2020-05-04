@@ -60,24 +60,26 @@ const replyWithWeirdBro = async (weirdItems, redditApi) => {
     } catch (err) {
       console.log(`Error replying bro: ${err}`);
 
-      const minsIndex = err.indexOf('minutes');
-      const secsIndex = err.indexOf('seconds');
+      if (err.includes('RATELIMiT')) {
+        const minsIndex = err.indexOf('minutes');
+        const secsIndex = err.indexOf('seconds');
 
-      let sleepTime;
+        let sleepTime;
 
-      if (minsIndex < 0) {
-        sleepTime = err.substring(minsIndex - 3, minsIndex);
+        if (minsIndex < 0) {
+          sleepTime = err.substring(minsIndex - 3, minsIndex);
 
-        if (sleepTime === 0) {
-          sleepTime = 10;
+          if (sleepTime === 0) {
+            sleepTime = 10;
+          }
         }
-      }
 
-      if (secsIndex < 0) {
-        sleepTime = 1;
-      }
+        if (secsIndex < 0) {
+          sleepTime = 1;
+        }
 
-      nextAvailableCallTime = new Date().setMinutes(sleepTime);
+        nextAvailableCallTime = new Date().setMinutes(sleepTime);
+      }
     }
   });
 
